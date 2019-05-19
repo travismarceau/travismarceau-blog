@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}jp{{ end }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ with .Title }}{{ . }} - {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Description }}">
+  {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+  <meta name="robots" content="index, follow">
+  {{ else }}
+  <meta name="robots" content="noindex, nofollow">
+  {{ end }}
+  <link rel="shortcut icon" href="{{`favicon.ico` | relURL}}">
+  {{ block "head-includes" . }}
+  {{ partial "head-includes.html" . }}
+  {{ end }}
+</head>
