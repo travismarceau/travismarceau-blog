@@ -1,9 +1,0 @@
-[submodule "themes/airspace-hugo"]
-	path = themes/airspace-hugo
-	url = https://github.com/themefisher/airspace-hugo.git
-[submodule "themes/yourfolio"]
-	path = themes/yourfolio
-	url = https://github.com/serg/yourfolio.git
-[submodule "themes/minimage"]
-	path = themes/minimage
-	url = https://github.com/d-kusk/minimage.git
