@@ -1,7 +1,6 @@
 baseURL: https://travismarceau.netlify.com/
 languageCode: en-us
 title: My New Hugo Site
-theme: yourfolio
 copyright: Copyright © 2019 - Travis Marceau. All Rights Reserved.
 
 paginate: 3

@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="main-container">
+  <div class="container">
+    <div class="padder">
+      <div class="p-taxonomy">
+        <ul class="c-taxonomy-list">
+          {{ $data := .Data }}
+          {{ range $key, $value := .Data.Terms }}
+          <li class="c-taxonomy-list__item">
+            <a class="c-link"
+              href="/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a><span>({{ len $value }})</span>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="c-footer-push"></div>
+</div>
+{{ end }}

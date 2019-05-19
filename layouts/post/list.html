@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="main-container">
+  {{ partial "navigation" . }}
+  {{ $pag := .Paginate (where .Data.Pages "Type" "post") 5 }}
+  <div class="container">
+    <div class="padder">
+      <div class="p-archive">
+        <ul class="c-archive-list">
+          {{ range $pag.Pages }}
+          {{ .Render "li" }}
+          {{ end }}
+        </ul>
+        {{ partial "pagenation.html" . }}
+      </div>
+    </div>
+  </div>
+  <div class="c-footer-push"></div>
+</div>
+{{ end }}

@@ -1,0 +1,16 @@
+<link href="{{ "css/mini.css" | absURL }}" rel="stylesheet">
+<link href="{{ "css/application.css" | absURL }}" rel="stylesheet">
+<link href="{{ "css/primary.css" | absURL }}" rel="stylesheet">
+
+<noscript id="deferredCss">
+  <link rel="stylesheet" href="{{`app.css` | relURL}}">
+</noscript>
+<script>
+  document.createElement("picture");
+</script>
+<script src="https://cdn.jsdelivr.net/picturefill/3.0.2/picturefill.min.js" async></script>
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/opengraph.html" . }}
+
+{{ template "_internal/google_analytics.html" . }}
+{{ template "_internal/schema.html" . }}
